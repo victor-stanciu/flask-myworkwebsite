@@ -2,6 +2,8 @@
 <html>
     <head>
         <title>Victor Stanciu</title>
+        <link rel="icon" href="static/VSlogo.png" sizes="any">
+
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
@@ -40,7 +42,20 @@
         }
         .about-text{
             flex: 2;
+            margin-left: 80px;
+            margin-top: 1px;
+            margin-bottom: 1px;
+            color: rgb(211, 196, 161);
+        }
+        .about-text-title{
+            flex: 2;
             margin-left: 40px;
+            margin-bottom: 1px;
+            margin-top: 20px;
+
+            color: rgb(211, 196, 161);
+            font-size: 20px;
+            font-weight: 700;
         }
         .about-section{
             display: flex;
@@ -50,10 +65,13 @@
         }
         .header{
             background-color: rgb(126, 38, 38);
-            font-size: 34px;
-            font-weight: 700;
+            color: rgb(211, 196, 161);
+            font-size: 40px;
+            font-weight: 600;
             text-align: center;
             margin-bottom: -75px;
+            padding-bottom: 6px
+
         }
         .text{
             color: rgb(211, 196, 161);
@@ -61,10 +79,17 @@
             flex-direction: column;
             margin-left: 30px;
         }
+        .projects-text{
+            font-size: 40px;
+            color: rgb(211, 196, 161);
+            border-bottom: 5px solid rgb(126, 38, 38);
+            border-width: 4px;
+            max-width: fit-content;
+            margin-left: -100px;
+        }
         .button-container .btn{
             margin-right: 10px;
             color: rgb(211, 196, 161);
-
         }
         .button-container .btn:last-child{
             margin-right: 0;
@@ -72,7 +97,6 @@
         .button-container .btn:hover{
             color: rgb(211, 196, 161);
             background-color: #c03d3b;
-
         }
         .centered{
             display: flex;
@@ -84,7 +108,22 @@
             max-width: 900px;
             padding: 10px;
         }
-
+        .deets{
+            color:  rgb(211, 196, 161);
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: -200px;
+        }
+        .logos-row {
+            display: flex;
+            justify-content: center;
+            /* /* gap: 50px;  */
+            flex-wrap: nowrap;
+            width: auto;
+            height: 150px;
+            max-width: 100%;
+        }
+        
     </style>
 
     <body>
@@ -135,10 +174,16 @@
             </div>
 
             <!-- <div class="section-small"></div> -->
-             <div class="button-container">
-                <button type="button" class="btn btn-outline-danger btn-lg">About me</button>
-                <button type="button" class="btn btn-outline-danger btn-lg">Services</button>
-                <button type="button" class="btn btn-outline-danger btn-lg">Projects</button>
+             <div class="button-container" style="margin-left: -65px;">
+                <a href="#about-section">
+                    <button type="button" class="btn btn-outline-danger btn-lg">About me</button>
+                </a>
+                <a href="#projects-section">
+                    <button type="button" class="btn btn-outline-danger btn-lg">Projects</button>
+                </a>
+                <a href="#cv-section">
+                    <button type="button" class="btn btn-outline-danger btn-lg">CV</button>
+                </a>
             </div> 
 
 
@@ -146,41 +191,65 @@
 
   
             <div class="section-xlarge"></div>
-            <h1  class="about-section, header">About me</h1>
-            <div class='content-container' style="color: rgb(211, 196, 161);">
+            <h1  id="about-section" class="about-section, header" style="margin-bottom: -30px">About me</h1>
+            <div class='content-container' style="color: rgb(211, 196, 161); text-align: justify;">
                 <section class="about-section">    
                     <div style="margin-right: 50px;"></div>
                     <!-- <img class="about-section" src="static/me.png" width="300"> -->
                     <img class="about-section" src="static/meCircle.png" width="300">
-                    <div style="margin-right: 100px;"></div>
+                    <div style="margin-right: 70px;"></div>
                     <div class="about-section">
-                        <p>Hi, Im Victor — a tech enthusiast who loves learning about Linux, automation, and web development. 
-                        I enjoy exploring new technologies, customizing my workspace, and creating practical projects that solve real problems.</p>
-                    </div>
+                        <p>Hi, my name is Victor — a tech enthusiast who loves helping people with troubleshooting and solving software/hardware issues.<br><br>
+                        
+                        I am looking forward use the skills mentioned on this page to apply them at my first workplace in the IT industry. Please get in touch either on LinkedIn or via phone call if my expertise is of interest to you or your company.
+                        </p>
+                        </div> 
 
+
+                     
+
+                        </div> 
             </div>
+            <div style="justify-content: center; margin-left: 670px; margin-top: -150px; margin-bottom: 115px;">
+                   <a href="https://www.linkedin.com/in/victor-stanciu-82416b16a/" target="_blank">
+                                <span class="deets">LinkedIn</span>
+                            </a>
+                            <span class="deets" style="margin-left: 100px;">+40 771 711 073</span>
             </div>
 
 
+                    
+          
+                    
+ 
 
-            <h1  class="about-section, header">Projects</h1>
+
+
+            <h1 id="projects-section" class="about-section, header">Projects</h1>
             <div class="section-smaller"></div>
             
             <!-- Helpdesk VMs -->
             <div class="centered">
                 <div class="content-box">
-                    <h2 style="color: rgb(211, 196, 161); border-bottom: 3px solid rgb(158, 46, 46)">Helpdesk-focused Virtual Machines</h2>
+                    <h2 class="projects-text">Active Directory VMs</h2>
+                     <p style="color: rgb(211, 196, 161);margin-left: -50px;">Configured Windows Server 2022 via VirtualBox to simulate a "helpdesk Active Director environment".</p>
+
+                    <div style="border-style:solid; border-color: rgb(126, 38, 38); border-width: 4px; max-width: 600px; margin: 0 auto; margin-top: 50px; margin-bottom: -40px;">
+                        <h3 style="font-size: 30px; font-weight: 700; color: rgb(211, 196, 161); text-align: center; background-color: rgb(126, 38, 38); padding-bottom: 6px;">Accomplishments</h3>
+                        <p class="about-text-title">Created Service Accounts</p>
+                             <p class="about-text">- for processes that run continuously, automation scripts</p>
+                             <p class="about-text">- security cameras, display kiosks</p>
+                        <p class="about-text-title">Created User Accounts</p>
+                             <p class="about-text">- onboarding, restricted work hours</p>
+                             <p class="about-text">- assigning of roles ("Member Of" section)</p>
+                             <p class="about-text">- setting password policies / logon hours</p>
+                        <p class="about-text-title">PowerShell</p>
+                             <p class="about-text">- used a script (github link) to easily add 1000 users to the AD</p>
+                    </div>
+
+
                         <div class="about-section content-container">
-                            <p style="color: rgb(211, 196, 161);">Hi, Im Victor — a tech enthusiast who loves learning about Linux, automation, and web development. 
-                            I enjoy exploring new technologies, customizing my workspace, and creating practical projects that solve real problems.
-                            </p>
-
-
-                       
-
                          </div>
-
-
                           <div style="max-width: 700px; margin: auto;">
                             {% include 'carousel.html' %}
                         </div>
@@ -189,64 +258,168 @@
             </div>
 
 
+
+            <div class="section-small"></div>
+
+            <!-- Ticketing Systems -->
+            <div class="centered">
+                <div class="content-box">
+                    <h2 class="projects-text" style="margin-top: -100px;">Ticketing Systems</h2>
+                     <p style="color: rgb(211, 196, 161);margin-left: -50px;">Simulating ticket creation with SolarWinds (and Spiceworks)</p>
+
+                    <div style="border-style:solid; border-color: rgb(126, 38, 38); border-width: 4px; max-width: 600px; margin: 0 auto; margin-top: 50px;">
+                        <h3 style="font-size: 30px; font-weight: 700; color: rgb(211, 196, 161); text-align: center; background-color: rgb(126, 38, 38); padding-bottom: 6px;">Accomplishments</h3>
+                        <p class="about-text-title">Creating tickets</p>
+                             <p class="about-text">- setting priorities</p>
+                             <p class="about-text">- applying SLA guidelines by prioritizing based on urgency and importance</p>
+                        <p class="about-text-title">Escalating workflows</p>
+                             <p class="about-text">- sending the issue to L2 or L3 if the case is above the scope of L1 Helpdesk </p>
+                        <p class="about-text-title">Documentation habits</p>
+                             <p class="about-text">- after resolving a ticket, I would document the process and lessons learned</p>
+                    </div>
+
+
+                        <div class="about-section content-container">
+                         </div>
+                          <div style="max-width: 700px; margin: auto; margin-top: -40px;">
+                            {% include 'carousel-ticket.html' %}
+                        </div>
+        
+                </div>
+            </div>
+
+
+             <div class="section-small"></div>
+
             <!-- Homelab -->
             <div class="centered">
                 <div class="content-box">
-                    <h2 style="color: rgb(211, 196, 161); border-bottom: 3px solid rgb(158, 46, 46)">Configuring/managing a Homelab</h2>
+                    <h2 class="projects-text" style="margin-top: -50px;">Homelab</h2>
+                     <p style="color: rgb(211, 196, 161);margin-left: -50px;">Runnning Proxmox on a Lenovo M600 Mini PC. Primarily acts as a self-hosting server & Linux learning environment.</p>
+
+                    <div style="border-style:solid; border-color: rgb(126, 38, 38); border-width: 4px; max-width: 600px; margin: 0 auto; margin-top: 50px;">
+                        <h3 style="font-size: 30px; font-weight: 700; color: rgb(211, 196, 161); text-align: center; background-color: rgb(126, 38, 38); padding-bottom: 6px;">Accomplishments</h3>
+                        <p class="about-text-title">Web hosting</p>
+                             <p class="about-text">- self-hosting my "Gamedev projects" + the site you are currently on </p>
+                        <p class="about-text-title">Linux learning environment</p>
+                             <p class="about-text">- actively familiarizing myself with Bash scripting & cronjobs</p>
+                        <p class="about-text-title">Other self-hosted services</p>
+                             <p class="about-text">- built a media streaming server for my parents</p>
+                             <p class="about-text">- file-syncing</p>
+                             <p class="about-text">- on demand audiobooks</p>
+                    </div>
+
+
                         <div class="about-section content-container">
-                            <p style="color: rgb(211, 196, 161);">Hi, Im Victor — a tech enthusiast who loves learning about Linux, automation, and web development. 
-                            I enjoy exploring new technologies, customizing my workspace, and creating practical projects that solve real problems.
-                            </p>
-
-                            <div style="align-self: center;">
-                                <img src="static/sunset.jpg" width="600">
-                            </div>
-
                          </div>
-                </div>
+                          <div style="max-width: 700px; margin: auto; margin-top: -40px;">
+                            {% include 'carousel-homelab.html' %}
+                        </div>
             </div>
-            
-            <!-- Scripting (Python / Bash) -->
+            </div>
+            </div>
+
+
+            <!-- Scripting / Webdev -->
+            <div class="section-small"></div>
             <div class="centered">
                 <div class="content-box">
-                    <h2 style="color: rgb(211, 196, 161); border-bottom: 3px solid rgb(158, 46, 46)">Scripting (Python / Bash)</h2>
-                        <div class="about-section content-container">
-                            <p style="color: rgb(211, 196, 161);">Hi, Im Victor — a tech enthusiast who loves learning about Linux, automation, and web development. 
-                            I enjoy exploring new technologies, customizing my workspace, and creating practical projects that solve real problems.
-                            </p>
-
-                            <div style="align-self: center;">
-                                <img src="static/sunset.jpg" width="600">
-                            </div>
-
-                         </div>
+                    <h2 class="projects-text" style="margin-top: -20px;">Scripting / Webdev</h2>
+                     <p style="color: rgb(211, 196, 161);margin-left: -50px;">Lastly I would like to mention that I have experience writing several Bash and Python scripts. This website was also made by me from the ground up, using HTML, CSS and the Bootstrap framework here and there.</p>
                 </div>
             </div>
-
-
-
-     
             
-
-            <div class="section-small"></div>
-            <h1  class="about-section, header">Fun Stuff</h1>
-            <div style="margin-top: 100px"></div>
-            <div class="text">
-                <span>My current favorite</span>
-                <span style="color: rgb(188, 47, 47);">red</span>
-                <span>album:</span>
+            <!-- CV -->
+            <div class="section-smaller"></div>
+            <h1  id="cv-section" class="about-section header">CV</h1>
+            <div class="button-container" style="margin-top: 100px">
+                <a href="static/VictorStanciuCV.pdf" download>
+                    <button type="button" class="btn btn-outline-danger">Download as PDF</button>
+                </a>
             </div>
 
             <div class="about-section">
-            <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/album/2IPIumpbhrtBvjyzIgGE9j?utm_source=generator&theme=0" width="50%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+            <embed src="static/VictorStanciuCV.pdf" width="800px" height="1180px" style="margin-top: -20px; margin-bottom: -80px;" />
+          
             </div>
 
-        
 
 
 
+            <div class="section-smaller"></div>
+            <h1  id="fun-section" class="about-section header">Other</h1>
+            <div style="margin-top: 100px"></div>
+     
+<!-- 
+            <div class="centered">
+                <div class="content-box" style="max-width: 1200px;">
+                    <h2 class="projects-text" style="margin-top: -20px;">Professional Credentials</h2>
+                    <div class="logos-row">
+                        <img src="/static/buas.png" style="width: 250px; height: 100px;margin-top: 20px;">
+                        <img src="/static/a+.png" style="width: 150px; margin-left: 100px; ">
+                        <img src="/static/net+.png" style="width: 150px;">
+                        <img src="/static/hel.png" style="width: 250px;margin-left: 100px;height: 150px;">
+                    </div>
+                                    <div class="text">Earned         In progress</div>
 
+                </div>
+            <div class="section-small"></div>
+
+            </div> -->
+
+           
+
+            <div class="about-text center" style="font-size: 26px; justify-content: center; text-align: center; margin-left: 0px">
+                <span>My current favorite  </span>
+                <span style="color: rgb(188, 47, 47);">red </span>
+                <span>album:</span>
+
+            </div>
+
+
+
+            <div class="about-section" style="margin-top: -5px;">
+           <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/album/1l6GZVtPttp3d2W9I3mH2b?utm_source=generator&theme=0" width="50%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy">
+
+           </iframe>
+            </div>
+           
+
+
+<footer style="background-color: rgb(64, 31, 31); border-top: 2px solid rgb(137, 125, 97);" class="d-flex flex-column align-items-center py-3">
+
+    <!-- Back to top link -->
+    <a href="#" style="color: rgb(137, 125, 97); margin-bottom: 10px; text-decoration: underline; ">
+        Back to the top
+    </a>
+
+    <!-- Row with text + image -->
+    <div class="d-flex align-items-center" style="gap: 10px; margin-left: 20px;">
+        <div style="color: rgb(137, 125, 97);">
+            © Victor Stanciu, 2025
+        </div>
+        <img src="static/VSlogo.png" width="30" alt="Logo">
+    </div>
+
+</footer>
+
+            
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function () {
+
+                // remove "active" from all nav links
+                document.querySelectorAll('.nav-link').forEach(nav => 
+                    nav.classList.remove('active')
+                );
+
+                // add "active" to the clicked one
+                this.classList.add('active');
+            });
+        });
+    </script>
+
     </body>
 </html>

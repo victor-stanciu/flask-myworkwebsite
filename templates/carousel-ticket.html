@@ -1,0 +1,64 @@
+<style>
+    .carousel-text    {
+        color: rgb(211, 196, 161);
+        margin-top: 15px;
+    }
+    #carouselTicket {
+      max-width: 700px;
+      height:450px;
+      margin: auto;
+    }
+    #carouselTicket .carousel-item img {
+      height: 100%;
+      width: auto;
+      object-fit:contain;
+      margin: auto;
+      display: block;
+    }
+.carousel-control-prev-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='red' viewBox='0 0 16 16'%3E%3Cpath d='M11 1L3 8l8 7'/%3E%3C/svg%3E");
+}
+
+.carousel-control-next-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='red' viewBox='0 0 16 16'%3E%3Cpath d='M5 1l8 7-8 7'/%3E%3C/svg%3E");
+}
+
+</style>
+
+<div id="carouselTicket" class="carousel slide">
+  <div class="carousel-inner">
+
+    <div class="carousel-item active text-center">
+      <img src="static/helpdesk/ticketing/creatingTicket.png" class="d-block w-75" alt="Organizational Unit setup" style="max-height: 450px;";>
+      <div class="carousel-text">
+        <h5>Creating a new ticket</h5>
+        <p>Determining the priority & assigning the ticket to the right department (escalating if applicable).</p>
+      </div>
+    </div>
+
+    <div class="carousel-item text-center">
+      <img src="static/helpdesk/ticketing/ticketPriority.png" class="d-block w-100" alt="" style="margin-top: 200px;">
+      <div class="carousel-text">
+        <h5>Priority management</h5>
+        <p>Working on tickets based on priority (SLA).</p>
+      </div>
+    </div>
+
+    <div class="carousel-item text-center">
+      <img src="static/helpdesk/ticketing/resolvingTicket.png" class="d-block w-75" alt="">
+      <div class="carousel-text">
+        <h5>User interaction</h5>
+        <p>After solving the issue, we would reach out to the user to check the system's functionality. If all is well, we mark the ticket as solved and document the incident & our steps for solving the issue.</p>
+      </div>
+    </div>
+
+
+  </div>
+
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselTicket" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselTicket" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</div>
