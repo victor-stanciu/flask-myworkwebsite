@@ -127,7 +127,71 @@
     </style>
 
     <body>
-        {% include 'navbar.html' %}
+        <!-- navbar -->
+        <div id="navbar" style="border-bottom: 3px solid rgb(126, 38, 38);">
+                            <!-- <div class="container" style="border-bottom: 3px solid rgb(126, 38, 38);"> -->
+                            <div class="container">
+
+                                
+                                <header
+                                class="d-flex flex-wrap justify-content-center py-3 ">
+                                <a
+                                    href="/"
+                                    class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none"
+                                    >
+
+                                
+                                <style>
+                        /* Default nav-link color */
+                        .nav-pills .nav-link {
+                            color: rgb(211, 196, 161); 
+                            background-color: #c03d3b; /*other 5 cells*/
+                            border-radius: 0.25rem; 
+                        }
+
+                        /* Active link color */
+                        .nav-pills .nav-link.active {
+                            color: rgb(211, 196, 161); 
+                            background-color: #833736; /* selected */
+                        }
+
+                        /* Optional: hover effect */
+                        .nav-pills .nav-link:hover {
+                            background-color: #91201e; /* brighter yellow on hover */
+                            color: rgb(211, 196, 161);
+                        }
+                        #navbar{
+                            position: sticky;
+                            top: 0;
+                            overflow: hidden;
+                            background-color: rgb(30, 30, 30);
+                            z-index: 9999;
+                        }
+                        </style>
+
+                                
+                                <!-- Header starts here -->
+                                    <svg class="bi me-2" width="40" height="32" aria-hidden="true">
+                                    <!-- <use xlink:href="#bootstrap"></use> -->
+                                    
+                                    <img src="/static/VSlogo.png" alt="Logo" height="48" class="d-inline-block align-text-top">
+                                    </svg>
+                                    <span style="color:rgb(211, 196, 161); font-family: monospace; font-size: 20px; margin-left: 15px;">Helpdesk Technician</span>
+                                </a>
+                                <ul class="nav nav-pills" style="margin-top: 5px;">
+                                    <li class="nav-item">
+                                    <a href="#" class="nav-link" aria-current="page">Home</a>
+                                    </li>
+                                    <li class="nav-item"><a href="#about-section" class="nav-link">About</a></li>
+                                    <li class="nav-item"><a href="#projects-section" class="nav-link">Projects</a></li>
+                                    <li class="nav-item"><a href="#cv-section" class="nav-link">CV</a></li>
+                                    <li class="nav-item"><a href="#fun-section" class="nav-link">Other</a></li>
+                                </ul>
+                                </header>
+                                </div>
+
+         </div>
+
 
 
 
@@ -211,7 +275,7 @@
                         </div> 
             </div>
             <div style="justify-content: center; margin-left: 670px; margin-top: -150px; margin-bottom: 115px;">
-                   <a href="https://www.linkedin.com/in/victor-stanciu-82416b16a/" target="_blank">
+                   <a href="https://www.linkedin.com/in/victor-stanciu-82416b16a/" target="_blank" style="text-decoration-color: #ddbb6c;">
                                 <span class="deets">LinkedIn</span>
                             </a>
                             <span class="deets" style="margin-left: 100px;">+40 771 711 073</span>
@@ -251,7 +315,79 @@
                         <div class="about-section content-container">
                          </div>
                           <div style="max-width: 700px; margin: auto;">
-                            {% include 'carousel.html' %}
+                            <!-- carousel1 -->
+                                            <style>
+                                                        .carousel-text    {
+                                                            color: rgb(211, 196, 161);
+                                                            margin-top: 15px;
+                                                            font-size: 12px;
+                                                        }
+                                                        #carouselExampleCaptions {
+                                                        max-width: 700px;
+                                                        height:450px;
+                                                        margin: auto;
+                                                        }
+                                                        #carouselExampleCaptions .carousel-item img {
+                                                        height: 100%;
+                                                        width: auto;
+                                                        object-fit:contain;
+                                                        margin: auto;
+                                                        display: block;
+                                                        }
+                                                    .carousel-control-prev-icon {
+                                                    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='red' viewBox='0 0 16 16'%3E%3Cpath d='M11 1L3 8l8 7'/%3E%3C/svg%3E");
+                                                    }
+
+                                                    .carousel-control-next-icon {
+                                                    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='red' viewBox='0 0 16 16'%3E%3Cpath d='M5 1l8 7-8 7'/%3E%3C/svg%3E");
+                                                    }
+
+                                                    </style>
+                                                        <div id="carouselExampleCaptions" class="carousel slide">
+                                                        <div class="carousel-inner">
+
+                                                            <div class="carousel-item active text-center">
+                                                            <img src="static/helpdesk/AD/one.png" class="d-block w-100" alt="Organizational Unit setup">
+                                                            <div class="carousel-text">
+                                                                <h5>Creating accounts</h5>
+                                                                <p>Both Service and User accounts.</p>
+                                                            </div>
+                                                            </div>
+
+                                                            <div class="carousel-item text-center">
+                                                            <img src="static/helpdesk/AD/three(admin&user).png" class="d-block w-75" alt="">
+                                                            <div class="carousel-text">
+                                                                <h5>Understanding permissions</h5>
+                                                                <p>And managing Groups.</p>
+                                                            </div>
+                                                            </div>
+
+                                                            <div class="carousel-item text-center">
+                                                            <img src="static/helpdesk/AD/four(logonHours).png" class="d-block w-100" alt="">
+                                                            <div class="carousel-text">
+                                                                <h5>Configuring user policies</h5>
+                                                                <p>Setting Logon hours for individual users.</p>
+                                                            </div>
+                                                            </div>
+
+                                                                <div class="carousel-item text-center">
+                                                            <img src="static/helpdesk/AD/notesForAD.png" class="d-block w-75" alt="" style="max-width: 350px;">
+                                                            <div class="carousel-text">
+                                                                <h5>My setup notes</h5>
+                                                                <p>Usually I take notes in Obsidian so that I could refer to them later, if I need to set an AD or other service again.</p>
+                                                            </div>
+                                                            </div>
+
+                                                        </div>
+
+                                                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                                                            <span class="carousel-control-prev-icon"></span>
+                                                        </button>
+                                                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                                                            <span class="carousel-control-next-icon"></span>
+                                                        </button>
+                                                        </div>
+
                         </div>
         
                 </div>
@@ -282,7 +418,73 @@
                         <div class="about-section content-container">
                          </div>
                           <div style="max-width: 700px; margin: auto; margin-top: -40px;">
-                            {% include 'carousel-ticket.html' %}
+                            <!-- {% include 'carousel-ticket.html' %} -->
+                            <!-- carousel-ticket -->
+                                    <style>
+    .carousel-text    {
+        color: rgb(211, 196, 161);
+        margin-top: 15px;
+    }
+    #carouselTicket {
+      max-width: 700px;
+      height:450px;
+      margin: auto;
+    }
+    #carouselTicket .carousel-item img {
+      height: 100%;
+      width: auto;
+      object-fit:contain;
+      margin: auto;
+      display: block;
+    }
+.carousel-control-prev-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='red' viewBox='0 0 16 16'%3E%3Cpath d='M11 1L3 8l8 7'/%3E%3C/svg%3E");
+}
+
+.carousel-control-next-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='red' viewBox='0 0 16 16'%3E%3Cpath d='M5 1l8 7-8 7'/%3E%3C/svg%3E");
+}
+
+                                    </style>
+
+                                    <div id="carouselTicket" class="carousel slide">
+                                    <div class="carousel-inner">
+
+                                        <div class="carousel-item active text-center">
+                                        <img src="static/helpdesk/ticketing/creatingTicket.png" class="d-block w-75" alt="Organizational Unit setup" style="max-height: 450px;";>
+                                        <div class="carousel-text">
+                                            <h5>Creating a new ticket</h5>
+                                            <p>Determining the priority & assigning the ticket to the right department (escalating if applicable).</p>
+                                        </div>
+                                        </div>
+
+                                        <div class="carousel-item text-center">
+                                        <img src="static/helpdesk/ticketing/ticketPriority.png" class="d-block w-100" alt="" style="margin-top: 200px;">
+                                        <div class="carousel-text">
+                                            <h5>Priority management</h5>
+                                            <p>Working on tickets based on priority (SLA).</p>
+                                        </div>
+                                        </div>
+
+                                        <div class="carousel-item text-center">
+                                        <img src="static/helpdesk/ticketing/resolvingTicket.png" class="d-block w-75" alt="">
+                                        <div class="carousel-text">
+                                            <h5>User interaction</h5>
+                                            <p>After solving the issue, we would reach out to the user to check the system's functionality. If all is well, we mark the ticket as solved and document the incident & our steps for solving the issue.</p>
+                                        </div>
+                                        </div>
+
+
+                                    </div>
+
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselTicket" data-bs-slide="prev">
+                                        <span class="carousel-control-prev-icon"></span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button" data-bs-target="#carouselTicket" data-bs-slide="next">
+                                        <span class="carousel-control-next-icon"></span>
+                                    </button>
+                                    </div>
+
                         </div>
         
                 </div>
@@ -313,11 +515,68 @@
                         <div class="about-section content-container">
                          </div>
                           <div style="max-width: 700px; margin: auto; margin-top: -40px;">
-                            {% include 'carousel-homelab.html' %}
-                        </div>
-            </div>
-            </div>
-            </div>
+                            <!-- {% include 'carousel-homelab.html' %} -->
+                            <style>
+    .carousel-text    {
+        color: rgb(211, 196, 161);
+        margin-top: 15px;
+    }
+    #carouselHomelab {
+      max-width: 700px;
+      height:450px;
+      margin: auto;
+    }
+    #carouselHomelab .carousel-item img {
+      height: 100%;
+      width: auto;
+      object-fit:contain;
+      margin: auto;
+      display: block;
+    }
+.carousel-control-prev-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='red' viewBox='0 0 16 16'%3E%3Cpath d='M11 1L3 8l8 7'/%3E%3C/svg%3E");
+}
+
+.carousel-control-next-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='red' viewBox='0 0 16 16'%3E%3Cpath d='M5 1l8 7-8 7'/%3E%3C/svg%3E");
+}
+
+                            </style>
+
+                            <div id="carouselHomelab" class="carousel slide">
+                            <div class="carousel-inner">
+
+                                <div class="carousel-item active text-center">
+                                <img src="static/homelab/portainer.png" class="d-block w-100" alt="Organizational Unit setup">
+                                <div class="carousel-text">
+                                    <h5>Portainer</h5>
+                                    <p>Helps me have a clear overview of all Docker containers I have created & Docker images I have stored.
+                            </p>
+                                </div>
+                                </div>
+
+                                <div class="carousel-item text-center">
+                                <img src="static/homelab/grafana.png" class="d-block w-100" alt="">
+                                <div class="carousel-text">
+                                    <h5>Grafana</h5>
+                                    <p>Works with Prometheus (system monitoring/alerting toolkit) to provide visual insights of my homelabs resources.</p>
+                                </div>
+                                </div>
+
+
+
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselHomelab" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon"></span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselHomelab" data-bs-slide="next">
+                                <span class="carousel-control-next-icon"></span>
+                            </button>
+                            </div>
+
+                                                    </div>
+                                        </div>
+                                        </div>
+                                        </div>
 
 
             <!-- Scripting / Webdev -->
